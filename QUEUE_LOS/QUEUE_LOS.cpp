@@ -21,7 +21,7 @@ void Creation(Queue* Q, unsigned int maxSize) //создание очереди
 	Q->last = Q->first;
 	Q->size = 0;
 }
-bool IsEmpty(Queue* Q) //проверка очереди на пустоту
+bool IsEmpty(Queue* Q) //проверка очереди на пустотуя
 {
 	if (Q->first == Q->last) return true;
 	else return false;
@@ -50,7 +50,7 @@ void Add(Queue* Q) //добавление элемента
 	else
 	{
 		Q->size++;
-		cout << "\nЭлемент добавлен\n\n";
+		cout << "\nЭлемент "<< Q->last->data << " добавлен\n\n";
 	}
 
 	
@@ -59,7 +59,7 @@ void Delete(Queue* Q) //удаление элемента
 {
 	Q->first = Q->first->next; //смещение указателя
 	Q->size--;
-	cout << "\nЭлемент удален\n\n";
+	cout << "\nЭлемент "<< Q->first->data << " удален\n\n";
 }
 void main() //главная функция
 {
